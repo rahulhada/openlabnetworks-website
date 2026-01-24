@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Logo from "/openlabnetworks-favicon-white.png"
 
 const Footer = () => {
   return (
@@ -6,8 +7,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">AI</span>
+            <div className="w-8 h-8 rounded  flex items-center justify-center">
+               <img src={Logo} className="h-8" alt="Open Lab Networks Logo" />
             </div>
             <span className="font-semibold text-foreground">OpenLab Networks</span>
           </div>
