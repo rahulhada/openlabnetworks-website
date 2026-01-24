@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Main heading */}
           <h1 className="animate-fade-up-delay-1 text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
             Empowering the Next Generation of{" "}
-            <span className="text-primary glow-text">AI Networking</span>
+            <span className="text-primary glow-text">Networking for AI</span>
           </h1>
 
           {/* Subheading */}
