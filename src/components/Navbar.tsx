@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
+import Logo from "/openlabnetworks-favicon-white.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,8 +10,8 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">AI</span>
+            <div className="w-8 h-8 rounded  flex items-center justify-center">
+              <img src={Logo} className="h-8" alt="Open Lab Networks Logo" />
             </div>
             <span className="font-semibold text-foreground">OpenLab Networks</span>
           </Link>
