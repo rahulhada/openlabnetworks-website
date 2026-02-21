@@ -13,7 +13,7 @@ const Hero = () => {
           {/* Status indicator */}
           <div className="animate-fade-up mb-8 flex justify-center">
             <div className="status-indicator">
-              SYSTEM STATUS: ONLINE
+              SYSTEM STATUS: WORK IN-PROGRESS
             </div>
           </div>
 
