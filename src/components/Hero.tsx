@@ -19,7 +19,7 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="animate-fade-up-delay-1 text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-            Cloud-Native Network & Infrastructure {" "} 
+            Cloud-Native Network Infrastructure {" "} 
             <span className="text-primary glow-text">Intelligently Accelerated. AI-Ready.</span>
           </h1>
 
