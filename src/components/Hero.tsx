@@ -25,8 +25,7 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="animate-fade-up-delay-2 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
-            Expert solutions for building, validating, and deploying AI-ready networks, 
-            supported by advanced training and hands-on playgrounds.
+            Empower network accelarators to foster ready to plug-in a cloud-native platform for driving AI workload innovation
           </p>
 
           {/* CTA Buttons */}
