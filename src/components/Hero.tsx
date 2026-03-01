@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Main heading */}
           <h1 className="animate-fade-up-delay-1 text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
             Empowering the Next Generation of{" "}
-            <span className="text-primary glow-text">Network for AI Workload</span>
+            <span className="text-primary glow-text">Network for AI Workload Testing</span>
           </h1>
 
           {/* Subheading */}
@@ -32,7 +32,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="gap-2 text-base px-8">
-              Start Learning
+              Innovation Sandbox
               <ArrowRight size={18} />
             </Button>
             <Button variant="outline" size="lg" className="gap-2 text-base px-8">
