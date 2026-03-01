@@ -19,13 +19,12 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="animate-fade-up-delay-1 text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-            Empowering the Next Generation of{" "}
-            <span className="text-primary glow-text">Network for AI Workload Testing</span>
+            Stop Scaling CPUs. Start Scaling Smart.
           </h1>
 
           {/* Subheading */}
           <p className="animate-fade-up-delay-2 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
-            Empower network accelarators to foster ready to plug-in a cloud-native platform for driving AI workload innovation
+            Empower network accelarators to foster ready to plug-in a cloud-native platform for driving AI workload innovation.
           </p>
 
           {/* CTA Buttons */}
