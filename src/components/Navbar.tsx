@@ -27,6 +27,9 @@ const Navbar = () => {
             <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact Us
             </Link>
+            <Link to="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              Training
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
