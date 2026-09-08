@@ -29,7 +29,7 @@ const Ecosystem: React.FC = () => {
                 SmartNIC <span className="text-[#00e5cc]">Ecosystem</span>
               </h1>
               <p className="text-xs md:text-sm text-zinc-400 leading-relaxed">
-                Co-innovating with <strong className="text-white">iWave Systems</strong> to build high-performance FPGA SmartNICs, SOM platforms, and P4-accelerated data planes.
+                Co-innovating with <strong className="text-white">iWave Global</strong> to build high-performance FPGA SmartNICs, SOM platforms, and P4-accelerated data planes.
               </p>
             </div>
 

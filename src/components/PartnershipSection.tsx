@@ -7,16 +7,16 @@ const CYAN = "#00e5cc";
 const iwaveSolutions = [
   {
     abbr: "iWave",
-    company: "iWave Systems",
+    company: "iWave Global",
     type: "FPGA SmartNIC & SOM",
     title: "Corundum & P4 Hardware Acceleration",
-    desc: "High-performance FPGA-based SmartNIC platforms and System-On-Module (SOM) solutions by iWave Systems, integrated with OpenLab P4 data-plane toolchain.",
+    desc: "High-performance FPGA-based SmartNIC platforms and System-On-Module (SOM) solutions by iWave Global, integrated with OpenLab P4 data-plane toolchain.",
     tags: ["iWave SOM", "FPGA SmartNIC", "PCIe Gen5", "P4 Target", "100G/400G"],
     specs: "Zynq UltraScale+ MPSoC / Versal Adaptive SoC",
   },
   {
     abbr: "iWave",
-    company: "iWave Systems",
+    company: "iWave Global",
     type: "AI & Embedded Computing",
     title: "AI Workload Offload & Telemetry",
     desc: "Offload AI cluster transport pipelines, RoCEv2 fabric acceleration, and in-band network telemetry directly onto iWave FPGA SmartNIC hardware.",
@@ -25,7 +25,7 @@ const iwaveSolutions = [
   },
   {
     abbr: "iWave",
-    company: "iWave Systems",
+    company: "iWave Global",
     type: "Custom Hardware Engineering",
     title: "Cloud-Native Network Solutions",
     desc: "Turnkey hardware design and P4-programmable data plane acceleration tailored for cloud providers, edge compute, and high-speed network functions.",
@@ -48,7 +48,7 @@ export const PartnershipSection: React.FC = () => {
             SmartNIC <span className="text-[#00e5cc]">Partner Integration</span>
           </h2>
           <p className="text-xs md:text-sm text-zinc-400 leading-relaxed">
-            OpenLabNetwork partners with <strong className="text-white">iWave Systems</strong> to deliver P4-programmable FPGA SmartNIC acceleration and high-density System-On-Module (SOM) solutions.
+            OpenLabNetwork partners with <strong className="text-white">iWave Global</strong> to deliver P4-programmable FPGA SmartNIC acceleration and high-density System-On-Module (SOM) solutions.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export const PartnershipSection: React.FC = () => {
             <div className="space-y-1.5">
               <div className="flex flex-wrap items-center gap-3">
                 <h3 className="text-xl md:text-2xl font-extrabold text-white tracking-tight">
-                  iWave Systems Technologies
+                  iWave Global
                 </h3>
                 <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#00e5cc]/10 border border-[#00e5cc]/30 text-[#00e5cc] text-[11px] font-mono font-semibold tracking-wide shrink-0">
                   Primary Hardware Partner
@@ -70,12 +70,12 @@ export const PartnershipSection: React.FC = () => {
             </div>
 
             <a
-              href="https://www.iwavesystems.com/"
+              href="https://iwave-global.com/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-zinc-800 text-xs font-mono text-zinc-300 hover:text-white hover:border-[#00e5cc] transition-colors shrink-0"
             >
-              Visit iWave Systems <ExternalLink size={13} className="text-[#00e5cc]" />
+              Visit iWave Global <ExternalLink size={13} className="text-[#00e5cc]" />
             </a>
           </div>
 
@@ -121,7 +121,7 @@ export const PartnershipSection: React.FC = () => {
         {/* Partnership CTA */}
         <div className="pt-4 text-center space-y-4">
           <p className="text-xs font-mono text-zinc-500">
-            Interested in building with OpenLab &amp; iWave Systems hardware?
+            Interested in building with OpenLab &amp; iWave Global hardware?
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
