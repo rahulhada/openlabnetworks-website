@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans">
+    <div className="min-h-screen font-sans" style={{ background: "var(--page-bg)", color: "var(--page-fg)" }}>
       <Navbar />
 
       <main className="pt-24 pb-16 px-4 sm:px-6">
@@ -22,10 +22,10 @@ const Contact: React.FC = () => {
 
           <div className="space-y-3 max-w-xl">
             <span className="status-pill">Contact</span>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Get in <span className="text-[#00e5cc]">touch</span>
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight" style={{ color: "var(--text-primary)" }}>
+              Get in <span style={{ color: "var(--accent-color)" }}>touch</span>
             </h1>
-            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+            <p className="text-xs sm:text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               Questions about partnerships, sandbox access, or SmartNIC integrations? We're here to help.
             </p>
           </div>
@@ -33,46 +33,51 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="bg-zinc-950 border border-zinc-800/80 rounded-2xl p-6 space-y-4">
+            <form
+              onSubmit={handleSubmit}
+              className="rounded-2xl p-6 space-y-4"
+              style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}
+            >
               <div>
-                <label className="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-mono uppercase tracking-wider mb-1.5" style={{ color: "var(--text-secondary)" }}>
                   Name
                 </label>
                 <input
                   type="text"
                   placeholder="Your name"
                   required
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-[#00e5cc] transition-colors"
+                  className="w-full rounded-lg px-3.5 py-2.5 text-xs focus:outline-none transition-colors theme-input"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-mono uppercase tracking-wider mb-1.5" style={{ color: "var(--text-secondary)" }}>
                   Work Email
                 </label>
                 <input
                   type="email"
                   placeholder="you@company.com"
                   required
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-[#00e5cc] transition-colors"
+                  className="w-full rounded-lg px-3.5 py-2.5 text-xs focus:outline-none transition-colors theme-input"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-mono uppercase tracking-wider mb-1.5" style={{ color: "var(--text-secondary)" }}>
                   Message
                 </label>
                 <textarea
                   rows={4}
                   placeholder="Tell us about your SmartNIC or AI infra requirements..."
                   required
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-[#00e5cc] transition-colors resize-none"
+                  className="w-full rounded-lg px-3.5 py-2.5 text-xs focus:outline-none transition-colors resize-none theme-input"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-full bg-[#00e5cc] text-black font-semibold text-xs hover:bg-[#00cbb5] transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 rounded-full font-semibold text-xs flex items-center justify-center gap-2 transition-colors"
+                style={{ background: "var(--accent-color)", color: "#fff" }}
               >
                 <Send size={14} /> {submitted ? "Message Sent!" : "Send Message"}
               </button>
@@ -90,14 +95,22 @@ const Contact: React.FC = () => {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-zinc-950 border border-zinc-800/80 hover:border-[#00e5cc]/40 rounded-2xl p-5 flex items-center gap-4 transition-colors group block"
+                  className="rounded-2xl p-5 flex items-center gap-4 transition-colors group block"
+                  style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#00e5cc]/10 border border-[#00e5cc]/20 flex items-center justify-center text-[#00e5cc] group-hover:scale-105 transition-transform shrink-0">
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform shrink-0"
+                    style={{
+                      background: "var(--accent-subtle-bg)",
+                      border: "1px solid var(--accent-subtle-border)",
+                      color: "var(--accent-color)",
+                    }}
+                  >
                     <item.icon size={18} />
                   </div>
                   <div>
-                    <p className="text-[11px] font-mono text-zinc-500 uppercase tracking-wider">{item.label}</p>
-                    <p className="text-xs font-semibold text-white group-hover:text-[#00e5cc] transition-colors">{item.val}</p>
+                    <p className="text-[11px] font-mono uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>{item.label}</p>
+                    <p className="text-xs font-semibold transition-colors" style={{ color: "var(--text-primary)" }}>{item.val}</p>
                   </div>
                 </a>
               ))}

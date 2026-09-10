@@ -1,41 +1,68 @@
 import React from "react";
-import { BookOpen, Users, Microscope } from "lucide-react";
-
-const programs = [
-  { icon: BookOpen, title: "For Students", sub: "Build a Solid Networking Foundation", desc: "Comprehensive introduction to networking fundamentals, equipping students with the skills to excel." },
-  { icon: Microscope, title: "For Researchers", sub: "Accelerate Networking Research", desc: "Leverage our sandbox ecosystem to spin up testing environments for P4 architectures and DPU offloads." },
-  { icon: Users, title: "For Professionals", sub: "Simulate NGNs in Production", desc: "Architect novel approaches guided by cutting-edge research. Test, verify, and incorporate DPU acceleration." },
-];
+import { BookOpen, Cpu, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TrainingSection: React.FC = () => (
-  <section className="bg-black text-white py-16 md:py-24 px-4 sm:px-6 border-t border-zinc-900 font-sans">
+  <section
+    className="py-16 md:py-24 px-4 sm:px-6 font-sans"
+    style={{
+      background: "var(--page-bg)",
+      borderTop: "1px solid var(--section-border)",
+    }}
+  >
     <div className="max-w-6xl mx-auto space-y-12">
       <div className="space-y-3 max-w-xl">
-        <span className="status-pill">Training Programs</span>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white">
-          Elevate your networking skills
+        <span className="status-pill">Academy</span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight" style={{ color: "var(--text-primary)" }}>
+          Hands-on SmartNIC Training
         </h2>
-        <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-          Comprehensive hands-on labs with interactive P4 and SmartNIC sandboxes.
+        <p className="text-xs sm:text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+          Learn FPGA, DPU programming, and AI cluster networking — on real hardware, through your browser.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {programs.map((p, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {[
+          { icon: Cpu, title: "SmartNIC Fundamentals", desc: "From silicon architecture to DOCA SDK setup on BlueField-3.", tag: "Beginner" },
+          { icon: BookOpen, title: "FPGA Data Plane Programming", desc: "Write, compile, and deploy FPGA pipelines to real SmartNIC targets.", tag: "Intermediate" },
+        ].map((t, i) => (
           <div
             key={i}
-            className="bg-zinc-950 border border-zinc-800/80 hover:border-[#00e5cc]/40 rounded-2xl p-6 space-y-4 transition-colors group"
+            className="rounded-2xl p-6 space-y-4 transition-colors group"
+            style={{
+              background: "var(--card-bg)",
+              border: "1px solid var(--card-border)",
+            }}
           >
-            <div className="w-10 h-10 rounded-xl bg-[#00e5cc]/10 border border-[#00e5cc]/20 flex items-center justify-center text-[#00e5cc] group-hover:scale-105 transition-transform">
-              <p.icon size={20} />
+            <div className="flex items-center justify-between">
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center"
+                style={{
+                  background: "var(--accent-subtle-bg)",
+                  border: "1px solid var(--accent-subtle-border)",
+                  color: "var(--accent-color)",
+                }}
+              >
+                <t.icon size={20} />
+              </div>
+              <span className="text-[10px] font-mono uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>{t.tag}</span>
             </div>
             <div>
-              <h3 className="text-sm font-bold text-white mb-0.5">{p.title}</h3>
-              <p className="text-xs font-mono text-[#00e5cc] mb-2">{p.sub}</p>
-              <p className="text-xs text-zinc-400 leading-relaxed">{p.desc}</p>
+              <h3 className="text-sm font-bold mb-1" style={{ color: "var(--text-primary)" }}>{t.title}</h3>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--text-secondary)" }}>{t.desc}</p>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="text-center">
+        <Link
+          to="/training"
+          className="inline-flex items-center gap-2 text-xs font-semibold transition-colors"
+          style={{ color: "var(--accent-color)" }}
+        >
+          View All Training Tracks <ArrowRight size={14} />
+        </Link>
       </div>
     </div>
   </section>

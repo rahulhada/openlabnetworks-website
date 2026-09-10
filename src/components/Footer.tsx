@@ -1,39 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTheme } from "./ThemeProvider";
 
 const links = [
   { to: "/",          label: "Home" },
   { to: "/about",     label: "About Us" },
-  { to: "/training",  label: "Academy" },
+  // { to: "/training",  label: "Academy" },  // Hidden for now
   { to: "/blog",      label: "Blog" },
   { to: "/ecosystem", label: "Partnership" },
   { to: "/contact",   label: "Contact" },
 ];
 
-const Footer: React.FC = () => (
-  <footer className="bg-black border-t border-zinc-900 py-8 px-4 sm:px-6 font-sans">
-    <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+const Footer: React.FC = () => {
+  const { theme } = useTheme();
 
-      {/* Brand logo & tagline */}
-      <Link to="/" className="flex items-center gap-3 group">
-        <img
-          src="/openlabnetworks-favicon-white.png"
-          alt="OpenLabNetwork"
-          className="h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
-        />
-        <span className="text-sm font-mono font-bold tracking-tight">
-          <span className="text-zinc-400">OPENLAB</span>
-          <span className="text-[#00e5cc]">NETWORK</span>
-        </span>
-      </Link>
+  return (
+    <footer
+      className="py-8 px-4 sm:px-6 font-sans"
+      style={{
+        background: "var(--page-bg)",
+        borderTop: "1px solid var(--section-border)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+
+        {/* Brand logo */}
+        <Link to="/" className="flex items-center group">
+          <img
+            src={theme === "dark" ? "/dark-logo.png" : "/light-logo.png"}
+            alt="OpenLabNetworks Logo"
+            className="h-8 md:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+          />
+        </Link>
 
       {/* Navigation links */}
-      <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-zinc-400 font-medium">
+      <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-medium" style={{ color: "var(--text-secondary)" }}>
         {links.map((l) => (
           <Link
             key={l.label}
             to={l.to}
-            className="hover:text-[#00e5cc] transition-colors"
+            className="transition-colors"
+            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-color)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "")}
           >
             {l.label}
           </Link>
@@ -41,12 +49,13 @@ const Footer: React.FC = () => (
       </div>
 
       {/* Copyright */}
-      <p className="text-[11px] font-mono text-zinc-500">
-        © 2026 OpenLabNetwork
+      <p className="text-[11px] font-mono" style={{ color: "var(--text-muted)" }}>
+        © 2026 OpenLabNetworks
       </p>
 
-    </div>
-  </footer>
-);
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

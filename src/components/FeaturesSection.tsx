@@ -8,14 +8,20 @@ const features = [
 ];
 
 const FeaturesSection: React.FC = () => (
-  <section className="bg-black text-white py-16 md:py-24 px-4 sm:px-6 border-t border-zinc-900 font-sans">
+  <section
+    className="py-16 md:py-24 px-4 sm:px-6 font-sans"
+    style={{
+      background: "var(--page-bg)",
+      borderTop: "1px solid var(--section-border)",
+    }}
+  >
     <div className="max-w-6xl mx-auto space-y-12">
       <div className="space-y-3 max-w-xl">
         <span className="status-pill">Why Choose Us</span>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight" style={{ color: "var(--text-primary)" }}>
           Built for the future of networking
         </h2>
-        <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+        <p className="text-xs sm:text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
           We don't teach syntax; we teach you how to think and build like a Senior Network Systems Engineer.
         </p>
       </div>
@@ -24,14 +30,25 @@ const FeaturesSection: React.FC = () => (
         {features.map((f, i) => (
           <div
             key={i}
-            className="bg-zinc-950 border border-zinc-800/80 hover:border-[#00e5cc]/40 rounded-2xl p-6 space-y-4 transition-colors group"
+            className="rounded-2xl p-6 space-y-4 transition-colors group"
+            style={{
+              background: "var(--card-bg)",
+              border: "1px solid var(--card-border)",
+            }}
           >
-            <div className="w-10 h-10 rounded-xl bg-[#00e5cc]/10 border border-[#00e5cc]/20 flex items-center justify-center text-[#00e5cc] group-hover:scale-105 transition-transform">
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform"
+              style={{
+                background: "var(--accent-subtle-bg)",
+                border: "1px solid var(--accent-subtle-border)",
+                color: "var(--accent-color)",
+              }}
+            >
               <f.icon size={20} />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-white mb-1.5">{f.title}</h3>
-              <p className="text-xs text-zinc-400 leading-relaxed">{f.desc}</p>
+              <h3 className="text-sm font-bold mb-1.5" style={{ color: "var(--text-primary)" }}>{f.title}</h3>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--text-secondary)" }}>{f.desc}</p>
             </div>
           </div>
         ))}

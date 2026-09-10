@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
   const location = useLocation();
@@ -11,18 +10,20 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background grid-background">
+    <div className="min-h-screen flex items-center justify-center" style={{ background: "var(--page-bg)" }}>
       <div className="text-center px-6">
-        <h1 className="text-8xl font-bold text-primary mb-4">404</h1>
-        <p className="text-xl text-muted-foreground mb-8">
+        <h1 className="text-8xl font-bold mb-4" style={{ color: "var(--accent-color)" }}>404</h1>
+        <p className="text-xl mb-8" style={{ color: "var(--text-secondary)" }}>
           Oops! This page doesn't exist.
         </p>
-        <Button asChild>
-          <Link to="/" className="gap-2">
-            <ArrowLeft size={18} />
-            Return to Home
-          </Link>
-        </Button>
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-colors"
+          style={{ background: "var(--accent-color)", color: "#fff" }}
+        >
+          <ArrowLeft size={18} />
+          Return to Home
+        </Link>
       </div>
     </div>
   );

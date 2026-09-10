@@ -1,2 +1,2 @@
-# Openlab Networks website
+# OpenLabNetworks website
 # the new one
